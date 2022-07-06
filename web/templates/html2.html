@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+{%extends "base.html" %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    {% include "barra.html" %}
+    {% block content %}
+    
+
+    <form action="" method="get">
+
+        <label for="nombre_hotel">Ingrese el hotel de su estadía: </label>
+        <input type="text" name = "nombre_hotel">
+
+
+        <label for="ubicacion">Ingrese la ubicacion de su hospedaje: </label>
+        <input type="text" name = "ubicacion">
+
+
+        <button type="submit">Enviar</button>
+
+    </form>
+
+
+    <hr>
+
+
+    <h1>Listado de hoteles: </h1>
+
+    {% for hote in web %}
+
+    <ul>
+        <li>Hotel visitado:{{ hote.nombre_hotel}}</li>
+        <li>Ubicacion: {{ hote.ubicacion}}</li>
+        
+    </ul>
+
+   
+    
+
+    {% endfor %}
+
+    
+    
+</body>
+</html>
+{% endblock %}

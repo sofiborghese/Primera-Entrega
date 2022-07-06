@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+{%extends "base.html" %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    {% include "barra.html" %}
+    {% block content %}
+    
+
+    <form action="" method="get">
+
+        <label for="prepuesto_aprox">Ingrese el presupuesto estimado de viaje en dólares: </label>
+        <input type="number" name = "presupuesto_aprox">
+
+
+        <label for="pais_elegido">Ingrese el país elegido para su viaje: </label>
+        <input type="text" name = "pais_elegido">
+
+        <label for="tipo_viaje">Ingrese el tipo de viaje elegido: </label>
+        <input type="text" name = "tipo_viaje>
+
+
+        <button type="submit">Enviar</button>
+
+    </form>
+
+
+    <hr>
+
+
+    <h1>Listado de hoteles: </h1>
+
+    {% for hote in web %}
+
+    <ul>
+        <li>Hotel visitado:{{ hoteles.nombre_hotel}}</li>
+        <li> Fecha de inauguración: {{hoteles.fecha_apertura}}</li>
+        <li>Ubicacion: {{ hoteles.ubicacion}}</li>
+        
+    </ul>
+
+   
+    
+
+    {% endfor %}
+
+    
+    
+</body>
+</html>
+{% endblock %}
