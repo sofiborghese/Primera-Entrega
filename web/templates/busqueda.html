@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{%extends "index.html" %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}
+    <title>Document</title>
+    {% endblock title %}
+
+</head>
+
+<body>
+   
+
+    {% block content %}
+    <p>
+    
+
+    <form action="" method="get">
+        Ingrese el nombre del pais que desea buscar:<input type= text name= "nombre" 
+        <input type= "submit" value="">
+
+    </form> 
+
+</p>
+
+
+    <p>
+         <form action= {% url "buscarr" %}>
+            {{form}}
+            <button>BUSCAR</button> 
+    
+    
+    
+        </form>
+       </p>
+
+    
+    
+</body>
+</html>
+{% endblock %}
